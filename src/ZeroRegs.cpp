@@ -478,7 +478,7 @@ void printZeroRegNVMCTRL(ZeroRegOptions &opts) {
     opts.ser.print(" PSZ=");
     opts.ser.print(1 << (3 + NVMCTRL->PARAM.bit.PSZ));
     opts.ser.print(" RWWEEPROM=");
-    opts.ser.print(NVMCTRL->PARAM.bit.RWWEEP);
+    // opts.ser.print(NVMCTRL->PARAM.bit.RWWEEP);
     opts.ser.println("");
 
     // INTENCLR
@@ -618,9 +618,9 @@ void printZeroRegPM(ZeroRegOptions &opts) {
     }
     opts.ser.println("");
 
-    opts.ser.print("EXTCTRL: ");
-    PRINTFLAG(PM->EXTCTRL, SETDIS);
-    opts.ser.println("");
+    // opts.ser.print("EXTCTRL: ");
+    // PRINTFLAG(PM->EXTCTRL, SETDIS);
+    // opts.ser.println("");
 
     opts.ser.print("CPUSEL:  CPUDIV=");
     PRINTSCALE(PM->CPUSEL.bit.CPUDIV);
@@ -689,8 +689,8 @@ void printZeroRegPM(ZeroRegOptions &opts) {
     if (PM->APBCMASK.bit.DAC_)      { opts.ser.print(" CLK_DAC_APB"); }
     if (PM->APBCMASK.bit.PTC_)      { opts.ser.print(" CLK_PTC_APB"); }
     if (PM->APBCMASK.bit.I2S_)      { opts.ser.print(" CLK_I2S_APB"); }
-    if (PM->APBCMASK.bit.AC1_)      { opts.ser.print(" CLK_AC1_APB"); }
-    if (PM->APBCMASK.bit.LINCTRL_)  { opts.ser.print(" CLK_LINCTRL_APB"); }
+    // if (PM->APBCMASK.bit.AC1_)      { opts.ser.print(" CLK_AC1_APB"); }
+    // if (PM->APBCMASK.bit.LINCTRL_)  { opts.ser.print(" CLK_LINCTRL_APB"); }
     opts.ser.println("");
 
     // INTENCLR
